@@ -6,6 +6,8 @@ on:
       SEMGREP_APP_TOKEN:
         required: true
 
+  workflow_dispatch:
+
 jobs:
   semgrep:
     name: semgrep

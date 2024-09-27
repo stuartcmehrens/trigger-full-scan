@@ -8,3 +8,8 @@ jobs:
     uses: ./.github/workflows/semgrep.yaml
     secrets:
       SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+
+  trigger_semgrep:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh workflow run semgrep
