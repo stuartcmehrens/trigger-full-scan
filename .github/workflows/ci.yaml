@@ -4,5 +4,10 @@ on:
   pull_request:
 
 jobs:
-  call_semgrep:
-    uses: ./.github/workflows/semgrep.yaml
+  trigger_semgrep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: gh workflow run semgrep
+        env:
+          GH_TOKEN: ${{ github.token }}
