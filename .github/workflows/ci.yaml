@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: gh workflow run semgrep -f ref="${{ github.event.pull_request.head.ref }}"
+      - run: gh workflow run semgrep -f sha="${{ github.event.pull_request.head.sha }}"
         env:
           GH_TOKEN: ${{ github.token }}
