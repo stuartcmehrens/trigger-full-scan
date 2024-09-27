@@ -2,6 +2,9 @@ name: semgrep
 
 on:
   workflow_call:
+    secrets:
+      SEMGREP_APP_TOKEN:
+        required: true
 
 jobs:
   semgrep:
