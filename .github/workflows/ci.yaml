@@ -5,4 +5,4 @@ on:
 
 jobs:
   call_semgrep:
-    uses: ./.github/templates/semgrep.yaml
+    uses: ./.github/workflows/semgrep.yaml
