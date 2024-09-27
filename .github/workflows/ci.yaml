@@ -4,13 +4,7 @@ on:
   pull_request:
 
 jobs:
-  call_semgrep:
-    uses: ./.github/workflows/semgrep.yaml
-    secrets:
-      SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
-
   trigger_semgrep:
-    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

@@ -1,11 +1,6 @@
 name: semgrep
 
 on:
-  workflow_call:
-    secrets:
-      SEMGREP_APP_TOKEN:
-        required: true
-
   workflow_dispatch:
 
 jobs:
